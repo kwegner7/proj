@@ -1,0 +1,227 @@
+================================================================================
+Open my GitHub:
+  https://github.com/kwegner7/proj
+
+Edit the ipynb for satellites:
+  cd /home/kurt/work/gps-satellites/jupyter
+  jupyter notebook satellites.ipynb &
+
+================================================================================
+Login using Google:
+https://accounts.google.com/
+kurt email
+Sunari..77
+
+https://www.thedataincubator.com/login_required.html?return_page=https%3A%2F%2Fwww.thedataincubator.com%2Ffellowship%2Fchallenge.html
+
+cd /home/kurt/work/python-examples/jupyter
+jupyter notebook Artworks.ipynb
+jupyter notebook AirDepth.ipynb
+jupyter notebook Example-Pandas.ipynb
+
+================================================================================
+OPEN IN https://nbviewer.jupyter.org/
+https://kwegner7.github.io/pub/Our-Website/jupyter/satellites.ipynb
+
+cd /home/kurt/work/tutorials/Data-Science-School/project/jupyter
+jupyter notebook satellites.ipynb
+
+
+
+cd ~/work/tutorials/Data-Science-School/tle
+python2 tle_calc.py
+
+https://www.celestrak.com/NORAD/elements/iridium.txt
+blank satellite name
+blank start date
+min 15
+101 samples
+
+================================================================================
+https://neo.sci.gsfc.nasa.gov/
+
+https://www.gps.gov/systems/gps/space/
+https://in-the-sky.org/satmap_worldmap.php
+https://www.satsignal.eu/software/wxtrack.htm
+
+https://sos.noaa.gov/datasets/satellites-paths-and-positions/
+
+
+
+https://www.celestrak.com/
+
+https://www.celestrak.com/NORAD/elements/gps-ops.txt
+
+https://in-the-sky.org/spacecraft.php?id=27663
+
+https://www.n2yo.com/
+
+
+TLE is a format of satellite position
+https://en.wikipedia.org/wiki/Two-line_element_set
+
+https://celestrak.com/NORAD/elements/gp.php?GROUP=GPS-OPS&FORMAT=CSV
+
+inclination vs. azimuth vs. latitude
+===============================================================================
+https://github.com/coltonriedel/tle
+apt install python-sgp4
+
+cd ~/work
+git clone https://github.com/coltonriedel/tle.git tle
+
+Python program computes satellite info
+https://pypi.org/project/sgp4/
+from sgp4.api import Satrec
+pip install sgp4
+pip list --vebose
+sgp4  2.15 /home/kurt/anaconda3/lib/python3.8/site-packages pip
+
+cd ~/work/tle
+python tle_calc.py
+Modify tle_calc.py:
+sys.path.insert(0,'/home/kurt/anaconda3/lib/python3.8/site-packages')
+The program wants URL to a TLE file
+
+Explains TLE format:
+https://www.stltracker.com/resources/tle
+https://www.stltracker.com/resources/tle
+
+https://pypi.org/project/sgp4/
+
+https://celestrak.com/columns/v04n03/
+USE THIS: CSV FORMAT
+
+
+================================================================================
+
+Choose Active Satellites
+Choose GPS Operational
+
+GPS Operational:
+https://celestrak.com/NORAD/elements/gp.php?GROUP=GPS-OPS&FORMAT=CSV
+
+
+International Space Station:
+https://celestrak.com/NORAD/elements/gp.php?CATNR=25544&FORMAT=CSV
+
+Chinese Debris:
+https://celestrak.com/NORAD/elements/gp.php?CATNR=25544&FORMAT=CSV
+
+
+https://www.narom.no/undervisningsressurser/sarepta/rocket-theory/satellite-orbits/introduction-of-the-six-basic-parameters-describing-satellite-orbits/
+
+https://celestrak.com/NORAD/archives/
+
+USE THIS TO SELECT OBJECTS
+https://celestrak.com/NORAD/documentation/gp-data-formats.php
+https://celestrak.com/NORAD/elements/gp-index.php?FORMAT=csv
+
+================================================================================
+There are currently 30 satellites in the GPS constellation contained in 6 orbital planes. Each GPS satellite orbits twice per 24 hour day around the earth. The goal of the GPS constellation is to make sure that at least 4 GPS satellites are covering every point on the earth at any one time. There also exist much space debris (for various reasons) orbiting the earth. For example, a large pattern of space debris was created in 2007 when the Chinese intentionally destroyed its own satellite. The locations of satellites and space debris are mostly public information. This project proposes to monitor GPS satellite locations and their positions in space relative to space debris, including the Chinese anti-satellite missile test debris. The goal of this project is to determine how close space debris might come to our essential GPS fleet.
+
+The GPS satellite data is presented in CSV format by the URL "https://celestrak.com/NORAD/elements/gp.php?GROUP=GPS-OPS&FORMAT=CSV". It can be copied and pasted into an empty .csv file. Similarly, the Chinese debris is available at "https://celestrak.com/NORAD/elements/gp.php?CATNR=25544&FORMAT=CSV"
+
+================================================================================
+Original notes.txt for Data Incubator
+================================================================================
+https://github.com/mcullan/voila-example 
+https://mybinder.org/v2/gh/mcullan/voila-example/HEAD 
+
+https://github.com/mcullan/voila-example
+
+
+
+================================================================================
+
+https://www.thedataincubator.com
+
+================================================================================
+The Data Incubator TDI
+A Pragmatic Institute Company
+Fellowship Scholarship and Placement Company
+
+You can apply for fellowship
+
+Sierra King - admissions
+Training to become data scientists
+9-5 8 weeks
+part time 20 weeks
+th and mon 7-9
+
+GitHub repo: https://github.com/mcullan/voila-example
+binder link: https://mybinder.org/v2/gh/mcullan/voila-example/HEAD 
+GitHub repo: https://github.com/mcullan/voila-example
+binder link: https://mybinder.org/v2/gh/mcullan/voila-example/HEAD 
+
+================================================================================
+Event "Live Overview focusing on TDI’s *New* Part-Time Data 
+Science Program"
+
+Part-Time Program
+20 weeks M and Th 7-9:30 ET
+10 hours per week outside class
+every 3 weeks new mini-project
+Same certification
+Data wrangling
+machine learning
+SQL
+Visualization
+Thinking beyond the data
+Spark PySpark
+TensorFlow
+
+We get own server Jupyter Hub
+contains all the curriculum and Python tools
+Finish challenge: 11:59 pm uTC Feb 15
+
+================================================================================
+MARKDOWN EXAMPLES:
+
+Examples of MarkDown:
+<hr style="height:2px; border:none; color:black; background-color:black;">
+### Displaying Digits Dataset's Description
+* **Digits dataset** is a subset of the [**UCI (University of California Irvine) ML hand-written digits dataset**](http://archive.ics.uci.edu/ml/datasets/Optical+Recognition+of+Handwritten+Digits)
+    * Original dataset: **5620 samples**—3823 for **training** and 1797 for **testing** 
+    * **Digits dataset**: Only the **1797 testing samples**
+* A Bunch’s **`DESCR` attribute** contains dataset's description 
+    * Each sample has **`64` features** (**`Number of Attributes`**) that represent an **8-by-8 image** with **pixel values `0`–`16`** (**`Attribute Information`**)
+    * **No missing values** (**`Missing Attribute Values`**) 
+* **64 features** may seem like a lot
+    * Datasets can have **hundreds**, **thousands** or even **millions of features**
+    * Processing datasets like these can require enormous computing capabilities
+
+### Script That Sends Dweets 
+ 
+```python
+# simulator.py
+"""A connected thermostat simulator that publishes JSON
+messages to dweet.io"""
+import dweepy
+import sys
+import time
+import random
+
+MIN_CELSIUS_TEMP = -25  
+MAX_CELSIUS_TEMP = 45 
+MAX_TEMP_CHANGE = 2
+
+# get the number of messages to simulate and delay between them
+NUMBER_OF_MESSAGES = int(sys.argv[1]) 
+MESSAGE_DELAY = int(sys.argv[2])
+
+dweeter = 'temperature-simulator-deitel-python'  # provide a unique name
+thermostat = {'Location': 'Boston, MA, USA',
+              'Temperature': 20, 
+              'LowTempWarning': False,
+              'HighTempWarning': False}
+
+```
+
+
+
+
+
+
+
+
