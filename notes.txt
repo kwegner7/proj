@@ -103,11 +103,13 @@ https://celestrak.com/NORAD/elements/gp.php?GROUP=GPS-OPS&FORMAT=CSV
 
 
 International Space Station:
+https://celestrak.com/NORAD/elements/gp.php?GROUP=stations&FORMAT=csv
+
 https://celestrak.com/NORAD/elements/gp.php?CATNR=25544&FORMAT=CSV
+https://www.celestrak.com/events/asat.php
 
 Chinese Debris:
-https://celestrak.com/NORAD/elements/gp.php?CATNR=25544&FORMAT=CSV
-
+https://celestrak.com/NORAD/elements/gp.php?GROUP=1999-025&FORMAT=csv
 
 https://www.narom.no/undervisningsressurser/sarepta/rocket-theory/satellite-orbits/introduction-of-the-six-basic-parameters-describing-satellite-orbits/
 
@@ -115,7 +117,12 @@ https://celestrak.com/NORAD/archives/
 
 USE THIS TO SELECT OBJECTS
 https://celestrak.com/NORAD/documentation/gp-data-formats.php
+
+CLICK HERE:
 https://celestrak.com/NORAD/elements/gp-index.php?FORMAT=csv
+Click CSV
+Click Chinese and copy the link
+https://celestrak.com/NORAD/elements/gp.php?GROUP=1999-025&FORMAT=csv
 
 ================================================================================
 There are currently 30 satellites in the GPS constellation contained in 6 orbital planes. Each GPS satellite orbits twice per 24 hour day around the earth. The goal of the GPS constellation is to make sure that at least 4 GPS satellites are covering every point on the earth at any one time. There also exist much space debris (for various reasons) orbiting the earth. For example, a large pattern of space debris was created in 2007 when the Chinese intentionally destroyed its own satellite. The locations of satellites and space debris are mostly public information. This project proposes to monitor GPS satellite locations and their positions in space relative to space debris, including the Chinese anti-satellite missile test debris. The goal of this project is to determine how close space debris might come to our essential GPS fleet.
