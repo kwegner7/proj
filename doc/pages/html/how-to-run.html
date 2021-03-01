@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>How To Run</title>
+  <link rel="stylesheet" href="../styles-default.css">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<!-- ======================================================================= -->
+<body>
+
+<div class="border-silver bold" style=width:70%>
+
+<h3 class="black under center">
+  How To Execute a Single GENFIT Run</h3>
+
+<br>
+
+<p>
+  Open the PowerShell. Specify the location of your local Git working tree.
+  And specify the location of the folder containing your run files:
+</p>
+
+<p class="shift green">
+  $WORKING = "$HOME\genfit\working"<br>
+  $RUNS = "$HOME\genfit\runs"
+</p>
+
+<p>
+  Suppose you have created a run file at:</p>
+
+<p class="shift green">
+  $RUNS\envrng-01.xml</p>
+
+<p>
+  Type the following commands:</p>
+
+<p class="shift green">
+  cd $WORKING<br>
+  & tools\run $RUNS\envrng-01.xml</p>
+
+<p>
+  You will see that in addition to the input <em>envrng-01.xml</em> file,
+  there are now 2 additional output files in the <em>runs</em> folder:</p>
+
+<p class="shift green">
+  $RUNS\envrng-01-out.xml<br>
+  $RUNS\envrng-01.csv</p>
+
+<p>
+  The PowerShell script that reads the input file and produces the output files is:</p>
+
+<p class="shift green">
+  $WORKING\tools\run.ps1</p>
+
+<p>
+  Detailed instructions of how to manually create an input XML run file are at:</p>
+  <h3 class=shift>
+    <a href="../../pages/doc/RES-User-Manual.pdf" target="_blank"
+    >User Manual</a>
+  </h3>
+
+<p>
+  There are many examples of input XML run files at:</p>
+
+<p class="shift green">
+  $WORKING\test\Input</p>
+
+<p style="text-align:right">
+  <a href="..\..\INSTRUCTIONS.html">BACK</a></p>
+
+</div>
+</body>
+</html>

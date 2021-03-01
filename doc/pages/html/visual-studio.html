@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Visual Studio</title>
+  <link rel="stylesheet" href="../styles-default.css">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<!-- ======================================================================= -->
+<body>
+
+<div class="border-silver bold" style=width:70%>
+
+<h3 class="black under center">
+  Visual Studio
+</h3>
+
+<br>
+
+
+<p>
+  C++ Visual Studio is required to compile.<br>
+  Must be in your path<br>
+  If you have 2015<br>
+  If you have 2017<br>
+  compiling the XML<br>
+  compiling manually<br>
+  modify path Windows and Powershell
+</p>
+
+
+<p>
+  Open the PowerShell. Specify the location of your local Git working tree:
+</p>
+
+<p class="shift green">
+  $WORKING = "$HOME\genfit\working"
+</p>
+
+<p>
+  Type the following commands:
+</p>
+
+<p class="shift green">
+  cd $WORKING<br>
+  & tools\build
+</p>
+
+<p>
+  There are four files that result from the compilation:
+</p>
+
+<p class="shift green">
+  $WORKING\tools\execute\GENFIT.dll<br>
+  $WORKING\tools\execute\GENFIT.exe<br>
+  $WORKING\tools\execute\genfit_dose.dll<br>
+  $WORKING\tools\execute\xerces-c_3_2D.dll
+</p>
+
+<p>
+  The PowerShell script that accomplishes the compilation is:
+</p>
+
+<p class="shift green">
+  $WORKING\tools\build.ps1
+</p>
+
+<p>
+  C++ Visual Studio is required to compile
+</p>
+
+<p style="text-align:right">
+  <a href="..\..\INSTRUCTIONS.html">BACK</a>
+</p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Generate CSV Files</title>
+  <link rel="stylesheet" href="../styles-default.css">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<!-- ======================================================================= -->
+<body>
+
+<div class="border-silver bold" style=width:70%>
+
+<h3 class="black under center">
+  Stand-Alone Functions to Compute Air Density and RHOR</h3>
+
+<br>
+
+
+<p>
+  Specify an altitude (feet) to obtain air density:
+</p>
+
+<p class="shift green">
+  GetAirDensity -altitude 150000.0
+</p>
+
+<p>
+  The result is:
+</p>
+
+<p class="shift green">
+  Air Density: 0.0011890 grams per centimeter cubed<br>
+</p>
+
+<p>
+  Specify any 2 positions in 3-space (feet) to obtain the RHOR:
+</p>
+
+<p class="shift green">
+  GetAirDepth -pos1 0.0, 10000.0, 100000.0 -pos2 20000.0, 10000.0, 150000.0
+</p>
+
+<p>
+  The result is:
+</p>
+
+<p class="shift green">
+  Air Density at Position 1: 0.0011890 grams per centimeter cubed<br>
+  Air Density at Position 2: 0.0011716 grams per centimeter cubed<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;
+  Air Depth (rhor): 35.9341 grams per centimeter squared
+</p>
+
+<p style="text-align:right">
+  <a href="..\..\INSTRUCTIONS.html">BACK</a></p>
+
+</div>
+</body>
+</html>

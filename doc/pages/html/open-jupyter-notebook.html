@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Open in Jupyter Notebook</title>
+  <link rel="stylesheet" href="../styles-default.css">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<!-- ======================================================================= -->
+<body>
+
+<div class="border-silver bold" style=width:70%>
+
+<h3 class="black under center">
+  How To Open a CSV File in a Jupyter Notebook</h3>
+
+<br>
+
+<p>
+  It is required that Anaconda Navigator be installed on your PC.
+</p>
+
+<p class="shift green">
+  In the search window at lower left, type "anaconda"<br>
+  Select "Anaconda Powershell Prompt"<br>
+</p>
+
+<p>
+  Specify the location of the <em>"apps"</em> folder:
+</p>
+
+<p class="shift green">
+  $APPS = "C:\res\code\apps"
+</p>
+
+<p>
+  There is a "jupyter" folder containing a "data" folder. This is a useful
+  place to store the CSV files.<br><br>
+  Type the following commands:
+</p>
+
+<p class="shift green">
+  set-location $APPS/jupyter<br>
+  jupyter notebook AirDepth.ipynb<br>
+  Pull down "Kernel" and select Restart & Run All"
+</p>
+
+<p>
+  These are the meanings of each column:
+</p>
+
+<div class="shift green">
+
+<dl style="margin:0 30% 0 2%">
+<dt>x1, y1, z1</dt>
+<dd>The 3D Cartesian coordinates of the burst with origin on the surface of the earth. The x coordinate is the horizontal, the y coordinate is the depth and the z coordinate is the vertical component. Units are feet.</dd>
+<dt>x2, y2, z2</dt>
+<dd>The 3D Cartesian coordinates of the receiver with origin on the surface of the earth. The x coordinate is the horizontal, the y coordinate is the depth and the z coordinate is the vertical component. Units are feet.</dd>
+<dt>alt1, alt2</dt>
+<dd>The altitudes of the burst and receiver. The altitude is greater than or equal to the z coordinate because of the curvature of the earth. Units are feet.</dd>
+<dt>horiz, vert</dt>
+<dd>The horizontal and vertical offsets from the burst to the receiver. Units are feet.</dd>
+<dt>slant</dt>
+<dd>The slant range from the burst to the receiver. Units are feet.</dd>
+<dt>angle</dt>
+<dd>The angle of the burst to the receiver. Units are degrees. This angle is measured from the horizontal plane containing the burst location.</dd>
+<dt>density1, density2</dt>
+<dd>The air densities of the burst and receiver at alt1 and alt2. Units are grams per centimeter cubed.</dd>
+<dt>rhor</dt>
+<dd>The air depth (rhor) between the burst and receiver. Units are grams per centimeter squared.</dd>
+</dl>
+</div>
+
+
+<p>
+  Under the heading "Open a CSV File", you can specify any CSV file in the data folder:
+</p>
+
+<p class="shift green">
+  res = pd.read_csv('data/ballistic7.csv')
+</p>
+
+
+<p style="text-align:right">
+  <a href="..\..\INSTRUCTIONS.html">BACK</a></p>
+
+</div>
+</body>
+</html>

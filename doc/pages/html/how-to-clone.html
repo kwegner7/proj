@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>How To Clone</title>
+  <link rel="stylesheet" href="../styles-default.css">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<!-- ======================================================================= -->
+<body>
+
+<div class="border-silver bold" style=width:70%>
+
+<h3 class="black under center">
+  HOW TO CLONE THE GENFIT REPOSITORY</h3>
+
+<br>
+<p>
+  The repository for GENFIT is located at:</p>
+
+<p class="shift green">
+  \\usqts1nas01\COS1\USCOS1\NavySP\Repo\GENFIT\Code.git</p>
+
+<p>
+  In your work area, decide on a place for the GENFIT working tree. Also, decide
+  on a place to put your own run specifications. These run specifications must be outside
+  of the working tree. For example, place the working tree at:</p>
+
+<p class="shift green">
+  C:\Users\&lt;your name&gt;\genfit\working</p>
+
+<p>
+  And place the run specifications at:</p>
+
+<p class="shift green">
+  C:\Users\&lt;your name&gt;\genfit\runs</p>
+
+<p>
+  Open the PowerShell. The value <em>$HOME</em> is the 
+  same as "C:\Users\&lt;your&nbsp;name&gt;". Type the following commands (or
+  copy and paste at the PowerShell prompt):</p>
+
+<p class="shift green">
+  $WORKING = "$HOME\genfit\working"<br>
+  $RUNS = "$HOME\genfit\runs"<br>
+  $REPO = "\\usqts1nas01\COS1\USCOS1\NavySP\Repo\GENFIT\Code.git"<br><br>
+  cd $HOME<br>
+  if (-Not (Test-Path $RUNS)) { mkdir $RUNS }<br>
+  if (-Not (Test-Path $WORKING)) { git clone $REPO $WORKING }</p>
+
+<p style="text-align:right">
+  <a href="..\..\INSTRUCTIONS.html">BACK</a></p>
+
+</div>
+</body>
+</html>

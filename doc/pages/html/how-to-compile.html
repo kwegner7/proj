@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>How To Compile</title>
+  <link rel="stylesheet" href="../styles-default.css">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<!-- ======================================================================= -->
+<body>
+
+<div class="border-silver bold" style=width:70%>
+
+<h3 class="black under center">
+  How To Compile
+</h3>
+
+<br>
+
+<p>
+  Open a Bash shell. Specify the location of the "apps" folder:
+</p>
+
+<p class="shift green">
+  declare -r APPS="/c/res/code/apps"
+</p>
+
+<p>
+  Type the following commands:</p>
+
+<p class="shift green">
+  cd $APPS<br>
+  tools/build.bsh</p>
+
+<p>
+  Multiple executable files and library files result from the compilation:
+</p>
+
+<p class="shift green">
+  $APPS/tools/bin/libCommonLib.a<br>
+  $APPS/tools/bin/Trajectory.exe<br>
+  $APPS/tools/bin/VarySlantRange.exe<br>
+  $APPS/tools/bin/VaryHeightOfBurst.exe<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;.&nbsp;.
+</p>
+
+<p>
+  The Bash script that accomplishes the compilation uses the <em>gcc</em> compiler
+  and the <em>cmake</em> tool:
+</p>
+
+<p class="shift green">
+  $APPS/tools/build.bsh<br>
+</p>
+
+<p>
+  For convenience, modify the <em>$PATH</em> variable in your .bashrc file to include
+  the <em>tools</em> folder:
+</p>
+
+<p class="shift green">
+  declare -x PATH=$APPS/tools:${PATH}
+</p>
+
+<p>
+  For convenience, modify the <em>$env:path</em> variable in your Powershell profile to include the <em>tools</em> folder:
+</p>
+
+<p class="shift green">
+  $env:path = "$APPS\tools;" + $env:path
+</p>
+<p>
+  Your Powershell profile is located below your Documents folder:
+</p>
+
+<p class="shift green">
+  ...\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+</p>
+
+<p style="text-align:right">
+  <a href="..\..\INSTRUCTIONS.html">BACK</a>
+</p>
+
+</div>
+</body>
+</html>

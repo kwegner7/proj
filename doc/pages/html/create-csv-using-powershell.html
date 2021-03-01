@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Generate CSV Files</title>
+  <link rel="stylesheet" href="../styles-default.css">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<!-- ======================================================================= -->
+<body>
+
+<div class="border-silver bold" style=width:70%>
+
+<h3 class="black under center">
+  How To Generate CSV Files of Air Density and Air Depth</h3>
+
+<br>
+
+<p>
+  Open the PowerShell. Specify the location of the <em>"apps"</em> folder:
+</p>
+
+<p class="shift green">
+  $APPS = "C:\res\code\apps"
+</p>
+
+<p>
+  There is a "jupyter" folder containing a "data" folder. This is a useful
+  place to store the CSV files.<br><br>
+  The VarySlantRange command will vary the slant range between burst and 
+  receiver and produce a CSV file containing air density and air depth 
+  computations. VarySlantRange is the behavior of the ENVRNG run type of GENFIT.  
+</p>
+
+<p class="shift green">
+  set-location $APPS<br><br>
+  VarySlantRange -hob 1000.0 -angle 30.0 -first 1000.0 -last 10000.0 -steps 10<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;-file jupyter/data/envrng1.csv
+</p>
+<p>
+  The VarySlantRange command accepts positional arguments as well as named arguments. So the following is equivalent:  
+</p>
+
+<p class="shift green">
+  set-location $APPS<br><br>
+  VarySlantRange 1000.0 30.0 1000.0 10000.0 10 jupyter/data/envrng1.csv
+</p>
+
+<p>
+  These are other commands available to produce a CSV file of
+  air density and air depth. Each has a -help switch:</p>
+
+<p class="shift green">
+  VarySlantRange -help<br>
+  VaryHeightOfBurst -help<br>
+  VaryAngle -help<br>
+  Trajectory -help<br>
+  CsvFileSequence -help</p>
+
+<p style="text-align:right">
+  <a href="..\..\INSTRUCTIONS.html">BACK</a></p>
+
+</div>
+</body>
+</html>

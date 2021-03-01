@@ -1,0 +1,138 @@
+########################################################################
+# TODO
+########################################################################
+
+-- CSV Sequence example
+-- Regression Tests C++
+-- Regression Tests invoke the .exe directly
+-- Regression Tests PowerShell
+-- Regression test comparison python
+
+########################################################################
+# COMPILE AND RUN UBUNTU
+########################################################################
+
+Ubuntu:
+
+if true
+then
+  clear
+  cd /c/rhor && tools/build.bsh
+  tools/bin/VarySlantRange.exe 1000 30 1000 10000 10 /c/rhor/jupyter/data/envrng3.csv
+  tools/bin/VaryHorizontalRange.exe 2000 5000 100 10000 10 /c/rhor/jupyter/data/xenvrng1.csv
+  tools/bin/VaryHeightOfBurst.exe 3446.33 30 100 2000 20 /c/rhor/jupyter/data/fithob1.csv
+  tools/bin/VaryAngle.exe 10000 30000 0.0 90.0 100 /c/rhor/jupyter/data/angle1.csv
+  tools/bin/Trajectory.exe \
+    0 10000 100000 100.0 -200.0 0.0 20000 10000 150000  100.0 -100.0 0.0  /c/rhor/jupyter/data/ballistic0.csv
+  tools/bin/Regression.exe
+
+  echo '========================================'
+  cat /c/rhor/jupyter/data/envrng3.csv
+  echo '========================================'
+  cat /c/rhor/jupyter/data/xenvrng1.csv
+  echo '========================================'
+  cat /c/rhor/jupyter/data/fithob1.csv
+  echo '========================================'
+  cat /c/rhor/jupyter/data/angle1.csv
+  echo '========================================'
+  cat /c/rhor/jupyter/data/ballistic0.csv
+  echo '========================================'
+
+  echo ''
+  ls -l /c/rhor/jupyter/data/envrng3.csv
+  ls -l /c/rhor/jupyter/data/xenvrng1.csv
+  ls -l /c/rhor/jupyter/data/fithob1.csv
+  ls -l /c/rhor/jupyter/data/angle1.csv
+  ls -l /c/rhor/jupyter/data/ballistic0.csv
+fi
+
+
+Powershell:
+
+  set-location c:\rhor\
+
+VarySlantRange -hob 1000.0 -angle 30.0 -first 1000.0 -last 10000.0 -steps 10 -file jupyter/data/envrng1.csv
+
+
+
+ VarySlantRange -hob 1000.0 -angle 30.0 -first 1000.0 -last 10000.0 -steps 10 -file /mnt/c/res/code/rhor/jupyter/data/envrng7.csv
+
+
+
+  set-location c:\rhor
+
+  Trajectory -pos1 (     0.0, 10000.0, 100000.0 )`
+             -vel1 (  +100.0,  -200.0,      0.0 )`
+             -pos2 ( 20000.0, 10000.0, 150000.0 )`
+             -vel2 (  +100.0,  -100.0,      0.0 )`
+             -file jupyter/data/ballistic9.csv
+
+  VarySlantRange -hob 1000.0 -angle 30.0 -first 1000.0 -last 10000.0 -steps 10 -file jupyter/data/envrng7.csv
+
+
+  Get-Command VarySlantRange
+
+
+  Trajectory -x1        0.0 -y1     10000.0 -z1   100000.0 `
+             -xdot1  +100.0 -ydot1   -200.0 -zdot1     0.0 `
+             -x2    20000.0 -y2     10000.0 -z2   150000.0 `
+             -xdot2  +100.0 -ydot2   -100.0 -zdot2     0.0 `
+             -file /mnt/c/res/code/rhor/jupyter/data/ballistic7.csv
+
+
+  Trajectory -pos1 @(     0.0, 10000.0, 100000.0 )`
+             -vel1 @(  +100.0,  -200.0,      0.0 )`
+             -pos2 @( 20000.0, 10000.0, 150000.0 )`
+             -vel2 @(  +100.0,  -100.0,      0.0 )`
+             -file /mnt/c/res/code/rhor/jupyter/data/ballistic8.csv
+
+
+        
+Jupyter:
+  Search "ana" | Anaconda Powershell
+  cd c:\res\code\rhor\jupyter; jupyter notebook AirDepth.ipynb;
+  cd c:\Users\kwegner\work\pandas; jupyter notebook Example-Pandas.ipynb;
+  cd c:\Users\kwegner\work\pandas; jupyter notebook genfit.ipynb;
+  cd c:\Users\kwegner\work\Pandas-Standard; jupyter notebook Standard.ipynb;
+  
+./Users/kwegner/work/pandas/Example-Pandas.ipynb
+./Users/kwegner/work/Pandas-Standard/Standard.ipynb
+
+
+if true
+then
+  # compile and run
+  cd /c/res/code/rhor
+  rm -rf tools/build tools/bin
+
+  # The first command will creates CMake configuration files inside folder "./tools/build" 
+  cmake -H. -Btools/build
+
+  # and the second one will generate the output program  in "./tools/bin" folder.
+  # also Makefile produces outputs at xml/build/CmakeFiles
+  cmake --build tools/build -- -j3
+
+  ./tools/bin/main ../res/tools/bin/genfit.db3
+
+  if false
+  then
+    tools/compare-results.bsh run/expected/printTest.txt run/outputs/printTest.txt 
+  fi
+
+  cat doc/envrng.txt
+fi
+    
+########################################################################
+
+        <data>
+          <row>1000, 1.46987e+14, 1500, 35.9341, 1.716e+24</row>
+          <row>2000, 1.79331e+12, 2000, 71.3811, 8.37444e+22</row>
+          <row>3000, 1.48022e+10, 2500, 106.272, 1.55528e+21</row>
+          <row>4000, 6.66503e+09, 3000, 140.676, 1.24498e+21</row>
+          <row>5000, 3.21893e+09, 3500, 174.546, 9.39488e+20</row>
+          <row>6000, 1.61185e+09, 4000, 207.93, 6.77434e+20</row>
+          <row>7000, 9.48893e+08, 4500, 240.804, 5.42817e+20</row>
+          <row>8000, 5.48987e+08, 5000, 273.192, 4.10187e+20</row>
+          <row>9000, 3.08079e+08, 5500, 305.091, 2.91332e+20</row>
+          <row>10000, 2.01574e+08, 6000, 336.505, 2.35328e+20</row>
+        </data>

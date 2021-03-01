@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>How To View Results</title>
+  <link rel="stylesheet" href="../styles-default.css">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<!-- ======================================================================= -->
+<body>
+
+<div class="border-silver bold" style=width:70%>
+
+<h3 class="black under center">
+  How To Run and View Results at the GUI</h3>
+
+<br>
+
+<p>
+  Open the PowerShell. Specify the location of your local Git working tree.
+  And specify the location of the folder containing your run files:
+</p>
+
+<p class="shift green">
+  $WORKING = "$HOME\genfit\working"<br>
+  $RUNS = "$HOME\genfit\runs"
+</p>
+
+<p>
+  Suppose you have created a run file at:</p>
+
+<p class="shift green">
+  $RUNS\envrng-01.xml</p>
+
+<p>
+  Type the following commands:</p>
+
+<p class="shift green">
+  cd $WORKING\tools\execute<br>
+  java -jar RES_GUI.jar<br><br>
+  When prompted, select the <em><span class=teal>RES.properties</span></em> file at $WORKING\tools\execute<br>
+  Pulldown <em><span class=teal>File</span></em> and select <em><span class=teal>Import XML</span></em><br>
+  Select the XML file to run, for example, <em>$RUNS\envrng-01.xml</em><br><br>
+  Click <em><span class=teal>Execute</span></em><br>
+  When prompted, enter the output file name, for example, <em>envrng-01</em></p>
+
+<p>
+  When the execution is complete, you will see that in addition to the input<br>
+  <em>envrng-01.xml</em> file,
+  there are now 2 additional output files in the <em>runs</em> folder:</p>
+
+<p class="shift green">
+  $RUNS\envrng-01-out.xml<br>
+  $RUNS\envrng-01.csv</p>
+
+<p>
+  Then:</p>
+
+<p class="shift green">
+  Click <em><span class=teal>View Output</span></em><br>
+  &nbsp;&nbsp;to see the columns of data output from the execution<br><br>
+
+  Click <em><span class=teal>View Graph Output</span></em><br>
+  &nbsp;&nbsp;Pulldown X to be <em><span class=teal>slant range</span></em><br>
+  &nbsp;&nbsp;Pulldown Y to be <em><span class=teal>4pirenv</span></em><br>
+  &nbsp;&nbsp;Select <em><span class=teal>Make y axis Logrithmic</span></em><br>
+  &nbsp;&nbsp;Click <em><span class=teal>Plot</span></em>
+</p>
+
+<p style="text-align:right">
+  <a href="..\..\INSTRUCTIONS.html">BACK</a></p>
+
+</div>
+</body>
+</html>

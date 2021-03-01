@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>How To Create Run File</title>
+  <link rel="stylesheet" href="../styles-default.css">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<!-- ======================================================================= -->
+<body>
+
+<div class="border-silver bold" style=width:70%>
+
+<h3 class="black under center">
+  How to Create an Input Run File Using the GUI</h3>
+
+<br>
+
+<p>
+  Open the PowerShell. Specify the location of your local Git working tree:
+</p>
+
+<p class="shift green">
+  $WORKING = "$HOME\genfit\working"
+</p>
+
+<p>
+  Type the following commands:</p>
+
+<p class="shift green">
+  cd $WORKING\tools\execute<br>
+  java -jar RES_GUI.jar<br><br>
+  When prompted, select the <em><span class=teal>RES.properties</span></em> file at $WORKING\tools\execute<br>
+
+  Set the field <em><span class=teal>Name</span></em> to "envrng"<br>
+  Pulldown <em><span class=teal>Classification</span></em> and select <em><span class=teal>UNCLASSIFIED</span></em><br>
+
+
+  Click <em><span class=teal>New</span></em><br><br>
+  Under the <em><span class=teal>Inputs</span></em> tab, pulldown <em><span class=teal>Primary Device</span></em> <br>
+  Select <em><span class=teal>001_U_1</span></em><br>
+  Set the field <em><span class=teal>Primary Yield</span></em> to 10.0<br>
+  Pulldown <em><span class=teal>Run Type</span></em> and select <em><span class=teal>ENVRNG</span></em><br>
+  Set the field <em><span class=teal>Height of Burst</span></em> to 1000.0<br>
+  Set the field <em><span class=teal>Angle</span></em> to 30.0<br>
+  Set the field <em><span class=teal>Minimum Value</span></em> to 1000.0<br>
+  Set the field <em><span class=teal>Maximum Value</span></em> to 10000.0<br>
+  Set the field <em><span class=teal>Number of Steps</span></em> to 9<br><br>
+
+  Under the <em><span class=teal>Environment</span></em> tab, 
+    click <em><span class=teal>Add New</span></em><br>
+  When prompted, enter Environment Name, for example, <em>"dose 1"</em>
+
+
+  Pulldown <em><span class=teal>Dose Kind</span></em>
+    and select <em><span class=teal>Dose</span></em><br>
+  Pulldown <em><span class=teal>Response Type</span></em>
+    and select <em><span class=teal>Total Number Fluence</span></em><br>
+  Check <em><span class=teal>Neutrons</span></em>
+    under <em><span class=teal>Particles</span></em><br>
+  Click <em><span class=teal>Update</span></em><br><br>
+  Click <em><span class=teal>Save</span> and name the file, for example, "envrng-test"</em><br><br>
+
+<p>
+  There will now exist a new input run file:</p>
+<p class="shift green">
+  $WORKING\tools\execute\envrng-test.xml</p>
+
+<p style="text-align:right">
+  <a href="..\..\INSTRUCTIONS.html">BACK</a></p>
+
+</div>
+</body>
+</html>

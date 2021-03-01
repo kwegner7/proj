@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>How To Regression Test</title>
+  <link rel="stylesheet" href="../styles-default.css">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<!-- ======================================================================= -->
+<body>
+
+<div class="border-silver bold" style=width:70%>
+
+<h3 class="black under center">
+  How To Execute the GENFIT Regression Tests
+</h3>
+
+<br>
+
+<p>
+  Open the PowerShell. Specify the location of your local Git working tree:
+</p>
+
+<p class="shift green">
+  $WORKING = "$HOME\genfit\working"
+</p>
+
+<p>
+  Type the following commands:
+</p>
+
+<p class="shift green">
+  cd $WORKING<br>
+  & tools\regression
+</p>
+
+
+<p>
+  The PowerShell script that performs the regression testing is:
+</p>
+
+<p class="shift green">
+  $WORKING\tools\regression.ps1
+</p>
+
+<p>
+  The regression test reads each of the input run files contained in the folder:
+</p>
+
+<p class="shift green">
+  $WORKING\test\Input
+</p>
+
+<p>
+  And creates the output XML files in folder:
+</p>
+
+<p class="shift green">
+  $WORKING\test\Actual
+</p>
+
+<p>
+  Then the regression test compares the Actual results with the Expected results in folder:
+</p>
+
+<p class="shift green">
+  $WORKING\test\Expected
+</p>
+
+<p style="text-align:right">
+  <a href="..\..\INSTRUCTIONS.html">BACK</a>
+</p>
+
+</div>
+</body>
+</html>
