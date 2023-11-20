@@ -1,4 +1,70 @@
 ================================================================================
+THE REPOSITORY FOR THE SATELLITES JUPYTER NOTEBOOK
+================================================================================
+cd /home/kurt/repo/satellites
+
+git remote -v
+origin	https://github.com/kwegner7/proj.git (fetch)
+git branch -v
+main
+
+git lg -10
+
+================================================================================
+RUN THE SATELLITES JUPYTER NOTEBOOK
+================================================================================
+cd /home/kurt/repo/satellites/jupyter
+Type: jupyter notebook
+Click: satellites.ipynb
+Kernel | Restart & Run All
+
+================================================================================
+HOW TO UPDATE THIS JUPYTER NOTEBOOK IN GITHUB
+================================================================================
+https://github.com/login
+kurt email or kwegner7 / Sunari(9)
+email with verification code
+
+Click the repository: kwegner7/proj
+There is only the main branch
+Repository: https://github.com/kwegner7/proj.git
+
+# TO CLONE
+cd /home/kurt/repo/satellites
+git clone https://github.com/kwegner7/proj.git .
+
+# CORRECTION TO THE NOTEBOOK
+cd /home/kurt/repo/satellites/jupyter
+gedit satellites.ipynb &
+    celestrak.com --> .org
+
+# COMMIT AND PUSH
+cd /home/kurt/repo/satellites
+git add --all
+git commit -m "Correction celestrak.com to .org"
+git push --dry-run origin main
+
+Credentials:
+kwegner7
+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
+
+================================================================================
+HOW TO GENERATE PERSONAL ACCESS TOKEN
+https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls
+
+https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/How-to-create-a-GitHub-Personal-Access-Token-example
+
+Git will ask for your GitHub username and password. When Git prompts you for
+ your password, enter your personal access token.
+
+Click Home | click my picture in the upper right (it is funny picture)
+Under your GitHub user profile (not the repository profile), click the “Settings” link.
+Settings | Developer Settings | Personal Access Tokens | Tokens (classic)
+Regenerate token:
+
+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
+
+================================================================================
 Open my GitHub:
   https://github.com/kwegner7/proj
 
